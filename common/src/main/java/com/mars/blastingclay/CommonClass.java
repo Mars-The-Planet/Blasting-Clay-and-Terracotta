@@ -2,7 +2,7 @@ package com.mars.blastingclay;
 
 import com.mars.deimos.config.DeimosConfig;
 import com.mars.deimos.datagen.DeimosRecipeGenerator;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import static com.mars.blastingclay.Constants.MOD_ID;
 
@@ -12,7 +12,7 @@ public class CommonClass {
 
         for(String rawMetal : BlastingClayConfig.blasting_list){
             String[] rawMetalSet =  ((rawMetal).replaceAll("\\s","")).split(",");
-            DeimosRecipeGenerator.createBlastingJson(ResourceLocation.parse(rawMetalSet[0]), ResourceLocation.parse(rawMetalSet[1]), 100, Float.parseFloat(rawMetalSet[2]));
+            DeimosRecipeGenerator.createBlastingJson(Identifier.parse(rawMetalSet[0]), Identifier.parse(rawMetalSet[1]), 100, Float.parseFloat(rawMetalSet[2]));
         }
     }
 }
