@@ -6,6 +6,7 @@ import com.mars.deimos.config.DeimosConfig;
 import java.util.List;
 
 public class BlastingClayConfig extends DeimosConfig {
+    @Entry public static boolean show_wishful_recipes_message = true;
     @Entry public static List<String> blasting_list = Lists.newArrayList(
             "minecraft:clay_ball, minecraft:brick, 0.3",
             "minecraft:clay, minecraft:terracotta, 0.35",
